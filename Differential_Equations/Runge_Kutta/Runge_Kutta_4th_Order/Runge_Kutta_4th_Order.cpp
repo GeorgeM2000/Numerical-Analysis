@@ -16,7 +16,7 @@ double Runge_Kutta(double h, double y, double t, double x, int n, double exact_f
     double approx_k1, approx_k2, approx_k3, approx_k4, error;
     for(int i=0; i<=n; i++){
 
-        error = (std::abs(exact_func - y) / exact_func) * 100.0;
+        error = std::abs(y - exact_func);
 
         print_values(t, y, exact_func, error, i);
 
