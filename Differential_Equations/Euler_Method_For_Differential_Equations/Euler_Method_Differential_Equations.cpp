@@ -16,7 +16,7 @@ void print_values(double t, double y, double exact_func, float error, int n){
 double Euler_Method_Differential_Equations(double h, double y, double t, double x, int n, int i=0){
 
     double approx_func, exact_func, error;
-    for(int i=0; i<=n; i++){
+    for(int i=0; i<n; i++){
         approx_func = approximation_function(t, y);
         exact_func = exact_function(t);
 
@@ -39,7 +39,7 @@ int main(void){
     double h = 0.1, y = 1.0, t = 0.0, x = 1.0;
     int n = (x / (t+h))+1;
 
-    cout << Euler_Method_Differential_Equations(h, y, t, x, n);
+    cout << Euler_Method_Differential_Equations(h, y, t, x, n) << endl;
 
     return 0;
 }
