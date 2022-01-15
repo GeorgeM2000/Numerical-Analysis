@@ -25,7 +25,7 @@
 function I = simpsons(a, b, n, hat_func)
   if hat_func == 1
     func=@(x) f(x)*((x-a)/(b-a)); % Hat function 1
-  else
+  elseif hat_func == 2
     func=@(x) f(x)*((b-x)/(b-a)); % Hat function 2
   endif
     
